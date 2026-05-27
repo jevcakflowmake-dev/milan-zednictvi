@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #1A1714;
+  --ink: #F0EBE0;
+  --muted: #6B655C;
+  --accent: #D46B2F;
+}
+
+@layer base {
+  html {
+    cursor: none;
+    scroll-behavior: smooth;
+  }
+
+  input,
+  textarea,
+  select,
+  button,
+  a,
+  label {
+    cursor: auto;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+  }
+
+  h2 {
+    line-height: 1.05;
+  }
+
+  h3 {
+    line-height: 1.1;
+  }
+}
+
+@layer utilities {
+  .text-hero {
+    font-size: clamp(3.5rem, 9vw, 8.5rem);
+  }
+
+  .text-h2 {
+    font-size: clamp(2.25rem, 5vw, 4.5rem);
+  }
+
+  .text-h3 {
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+  }
+
+  .text-lead {
+    font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+    line-height: 1.65;
+  }
+}
